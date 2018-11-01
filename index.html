@@ -24,34 +24,72 @@ body {
 
 .column {
     flex: 50%;
-    padding: 5px;
+    margin: 10px;
     border-style: solid;
     border-color: #5B98F8;
-    border-width: 200px;
-    border height: 200px;
-    align-items: center;
+    padding-top: 5%;
+    
 }
 
-.h2 {
+#GetStarted {
     color: #5B98F8;
 }
 
 #profile {
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    margin-left: 90%;
+    margin-bottom: -10%;
 }
 
-#profile img {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-}
-
-.h1 {
+h1 {
     font: sans-serif;
-    font-size: 25px
+    font-size: 25px;
 }
+
+.boxImage {
+    width: 100px;
+    height: 100px;
+}
+
+#ImageText {
+    color: #5B98F8;
+    font-weight: bolder;
+}
+
+p {
+    font-weight: bolder;
+    color:#5B98F8;
+
+}
+
+#description {
+     font-weight: bolder;
+     color: black;
+}
+
+#GetStarted {
+    position : relative;
+    font-weight: bolder;
+    color:#5B98F8;
+    border: 3px;
+    border-style: solid;
+    border-color: #5B98F8;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+#header {
+    font-size: 400%;
+    font-style: italic;
+    font-family: sans-serif;
+
+}
+
+.MainBody {
+    margin-top: 22%;
+}
+
+
 
 </style>
 <meta charset="UTF-8">
@@ -60,48 +98,47 @@ body {
 </head>
 <body>
 
-<h1>Remoto</h1>
-<div class = "row">
-    <div class = "column">   
-        <p> 
-            <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html"> 
-                <img src="doctor.png" alt="Avatar" style="width:200px"; border: "#0000 6px outset;">
-                <p> Talk to a doctor </p>
-            </a>
-        </p>
-    </div>
-    <div class = "column">
-        <p> 
-            <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html"> 
-                <img src="hospital.png" alt="Avatar" style="width:200px">
-                <p> Find a hospital </p>
-            </a>
-        </p>
-
-    </div>
-</div>
-
-<div class = "row2">
-    <div class = "first">
-        <p>We connect you with a remote doctor who can diagnose your health issues and provide recomendations.</p>
-    </div>
-</div>
-
-<div class = "circle">
-    <h2> 
-        <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html">
-            Get Started
-        </a>
-    </h2>
-</div>
-
 <div id="profile">
+    <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html">
     <img src="profile.png" width="50px" height="50px">
 </div>
 
-<script>
-        
-</script>
+<h1 id = "header"> Remoto </h1>
+
+
+<div class = "MainBody">
+
+    <div class = "row">
+        <div class = "column">   
+                <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html"> 
+                    <img class="boxImage" src="doctor.png" alt="Avatar">
+                    <p id = "ImageText"> Talk to a doctor </p>
+                </a>
+        </div>
+        <div class = "column"> 
+                <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html"> 
+                    <img  class="boxImage" src="hospital.png" alt="Avatar">
+                    <p id = "ImageText"> Find a hospital </p>
+                </a>
+        </div>
+    </div>
+
+    <div class = "row2">
+        <div class = "first">
+            <p id = "description" >We connect you with a remote doctor who can diagnose your health issues and provide recomendations.</p>
+        </div>
+    </div>
+
+    <div class = "GetStarted">
+        <h2> 
+            <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html">
+                <p id = "GetStarted"> Get Started </p>
+            </a>
+        </h2>
+    </div>
+
+</div>
+
 </body>
 </html>
 
