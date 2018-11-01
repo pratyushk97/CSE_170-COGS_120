@@ -41,6 +41,16 @@ body {
     background: #fff
 }
 
+#profile {
+    position: relative;
+}
+
+#profile img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,6 +64,7 @@ body {
         <p> 
             <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html"> 
                 <img src="doctor.png" alt="Avatar" style="width:200px">
+                <p> Talk to a doctor </p>
             </a>
         </p>
     </div>
@@ -61,6 +72,7 @@ body {
         <p> 
             <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html"> 
                 <img src="hospital.png" alt="Avatar" style="width:200px">
+                <p> Find a hospital </p>
             </a>
         </p>
 
@@ -79,6 +91,10 @@ body {
             Get Started
         </a>
     </h2>
+</div>
+
+<div id="profile">
+    <img src="profile.png" class = "home">
 </div>
 
 <script src="js/home.js"></script>
