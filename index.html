@@ -31,6 +31,22 @@ body {
     
 }
 
+.row1:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.row1 {
+    display: flex;
+}
+
+.column1 {
+    flex: 50%;
+    margin: 4%;
+    
+}
+
 #GetStarted {
     color: #5B98F8;
 }
@@ -105,7 +121,8 @@ p {
 
 <div id="profile">
     <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html">
-    <img src="profile.png" width="50px" height="50px">
+        <img src="profile.png" width="50px" height="50px">
+    </a>
 </div>
 
 <h1 id = "header"> Remoto </h1>
@@ -128,6 +145,17 @@ p {
         </div>
     </div>
 
+    <div class = "row1">
+        <div class = "column1">   
+                    <p id = "description"> If your symptoms seem minor and tolerable. </p>
+                </a>
+        </div>
+        <div class = "column1"> 
+                    <p id = "description"> If your symptoms appear worse than usual. </p>
+                </a>
+        </div>
+    </div>
+
 <!--
     <div class = "row2">
         <div class = "first">
@@ -135,8 +163,8 @@ p {
         </div>
     </div>
 -->
-
-    <!-- <div class = "GetStarted">
+<!--
+     <div class = "GetStarted">
         <h2> 
             <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html">
                 <p id = "GetStarted"> Get Started </p>

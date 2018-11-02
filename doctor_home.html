@@ -24,6 +24,66 @@ body {
     padding: 5px;
 }
 
+#profile {
+    margin-left: 90%;
+    margin-bottom: -10%;
+}
+
+#back {
+    margin-right: 90%;
+    margin-bottom: -10%;
+    width: 2em;
+
+}
+
+#head {
+
+    margin: 0%;
+    font-size: 150%;
+    font-family: serif;
+}
+
+#TextBoxLeft {
+    position: relative;
+    font-weight: bolder;
+    color: #black;
+    border: 3px;
+    border-style: solid;
+    border-color: #black;
+    border-radius: 20px;
+    margin-right: 30%;
+    margin-left: 4%;
+    margin-bottom: 5%;
+    margin-top: 5%
+}
+
+#TextBoxRight {
+    position: relative;
+    font-weight: bolder;
+    color: #black;
+    border: 3px;
+    border-style: solid;
+    border-color: #black;
+    border-radius: 20px;
+    margin-left: 65%;
+    margin-bottom: 5%;
+    margin-top: 5%
+    margin: 30%;
+    width: 30%;
+}
+
+#messagesLeft {
+    font-family: sans-serif;
+    font-size: 150%;
+    padding-left: 4%;
+}
+
+#messagesRight {
+    font-family: sans-serif;
+    font-size: 150%;
+    padding-right: 22%;
+}
+
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,15 +91,47 @@ body {
 </head>
 <body>
 
-<h1>Talk to doctor</h1>
-
-
-<div class = "row2">
-    <div class = "first">
-        <p>Doctor here</p>
-    </div>
+<div id="profile">
+    <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html";>
+        <img src="profile.png" width="50px" height="50px">
+    </a>
 </div>
 
+<div id="back">
+    <a href="https://samarth1998.github.io/CSE_170-COGS_120/index.html";>
+        <img src="back.png" width="40px" height="40px">
+    </a>
+</div>
+
+<p id = "head"> Dr. Brad Jordan, M.D.</p>
+ <hr>
+
+<div  align = "left" id = "TextBoxLeft" class = "ex1"> 
+    <p id = "messagesLeft">
+        Hi,__________! I'll be helping you diagnose your symptoms today. How are you feeling right now? 
+    </p>
+</div>
+
+<div align = "right" id = 'TextBoxRight' class = "ex2"> 
+    <img src="sad.png" width="100px" height="100px">
+    <p id = "messagesRight"> Bad </p>
+</div>
+
+<div id = "TextBoxLeft" align = "left" class = "ex3">
+    <p id = "messagesLeft">
+        Sorry to hear that :(
+    </p>
+    <p id = "messagesLeft">
+        Please describe the symptoms you're having and I'll see if I can find any solutions
+    </p>
+</div>
+
+
+
+
+
+    
+</div>
 
 </body>
 </html>
