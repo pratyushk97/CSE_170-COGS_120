@@ -50,7 +50,12 @@ h1 {
     height: 100px;
 }
 
-#ImageText {
+#ImageText1 {
+    color: #5B98F8;
+    font-weight: bolder;
+}
+
+#ImageText2 {
     color: #5B98F8;
     font-weight: bolder;
 }
@@ -110,34 +115,44 @@ p {
 
     <div class = "row">
         <div class = "column">   
-                <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html"> 
-                    <img class="boxImage" src="doctor.png" alt="Avatar">
-                    <p id = "ImageText"> Talk to a doctor </p>
+                <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html">
+                    <img class="boxImage" id = "doctor1" src="doctor.png" alt="Avatar">
+                    <p id = "ImageText1"> Talk to a doctor </p>
                 </a>
         </div>
         <div class = "column"> 
-                <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html"> 
-                    <img  class="boxImage" src="hospital.png" alt="Avatar">
-                    <p id = "ImageText"> Find a hospital </p>
+                <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html">
+                    <img  class="boxImage" id = "hospital1" src="hospital.png" alt="Avatar">
+                    <p id = "ImageText2"> Find a hospital </p>
                 </a>
         </div>
     </div>
 
+<!--
     <div class = "row2">
         <div class = "first">
             <p id = "description" >We connect you with a remote doctor who can diagnose your health issues and provide recomendations.</p>
         </div>
     </div>
+-->
 
-    <div class = "GetStarted">
+    <!-- <div class = "GetStarted">
         <h2> 
             <a href="https://samarth1998.github.io/CSE_170-COGS_120/doctor_home.html">
                 <p id = "GetStarted"> Get Started </p>
+                <p id = "invisibleText"></p>
             </a>
         </h2>
     </div>
-
+-->
 </div>
+
+<script>
+    function myFunction(elem, clr)
+    {
+        elem.style.color = clr;
+    }
+</script>
 
 </body>
 </html>
