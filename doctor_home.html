@@ -92,13 +92,13 @@ body {
 <body>
 
 <div id="profile">
-    <a href="https://samarth1998.github.io/CSE_170-COGS_120/hospital_home.html";>
+    <a href="https://samarth1998.github.io/CSE_170-COGS_120/profile.html";>
         <img src="profile.png" width="50px" height="50px">
     </a>
 </div>
 
 <div id="back">
-    <a href="https://samarth1998.github.io/CSE_170-COGS_120/index.html";>
+    <a onclick="goBack()">
         <img src="back.png" width="40px" height="40px">
     </a>
 </div>
@@ -126,12 +126,12 @@ body {
     </p>
 </div>
 
-
-
-
-
-    
 </div>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 
 </body>
 </html>
