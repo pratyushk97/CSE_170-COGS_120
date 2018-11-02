@@ -168,18 +168,32 @@ body {
         </p>
     </div>
 
+    <div align = "right" class = "ex2 TextBoxRight" style="display: none" id="happy_res"> 
+        <img src="happy.png" width="100px" height="100px">
+        <p class= "messagesRight"> Good </p>
+    </div>
+
+    <div align = "left" class = "ex3 TextBoxLeft" style="display: none" id="happy_q2">
+        <p class= "messagesLeft">
+            Awesome :)
+        </p>
+        <p class= "messagesLeft">
+            We will set up an appointment for you with your doctor! 
+        </p>
+    </div>
+
     <div class="pushdown">
-        <div class="text-center" id="sadbtn">
-            <img src="sad.png"/>
+        <div>
+            <img src="sad.png" id="sadbtn"/>
             Sad
         </div>
-        <div id="happybtn">
+        <div >
 
-        <img src="happy.png" />
+            <img src="happy.png" id="happybtn"/>
         Happy
         </div>  
     </div>
-    <div class="fixed-bottom" style="display: none;">
+    <div class="fixed-bottom" id = "saad" style="display: none;">
         <p>
            Please describe your symptoms here 
         </p>
@@ -194,26 +208,50 @@ body {
             </div>
         </div>
     </div>
+
+    <div class="fixed-bottom" id = "haapy" style="display: none;">
+        <p>
+           We will show you the nearest hospital!  
+        </p>
+
+        <p>
+            OR
+        </p>
+
+        <div style="width: 100%">
+            <div class="choose">
+                Choose preference from a list A List
+            </div>
+        </div>
+    </div>
 </div>
 <script>
 function goBack() {
     window.history.back();
 }
 
+$('#happybtn').click(() => {
+    console.log("here");
+    $(".pushdown").hide();
+    $('#happy_res').show();
+    $("#happy_q2").show();
+    $('#haapy').show();
+});
+
 $('#sadbtn').click(() => {
+    console.log('here2');
     $(".pushdown").hide();
     $('#sad_res').show();
     $("#sad_q2").show();
-    $('.fixed-bottom').show();
-})
+    $('#saad').show();
+});
+
+
 
 $('.choose').click(() => {
     alert("Your Options Here")
 })
 
-$('#happybtn').click(() => {
-    alert("hi!!!");
-})
 
 </script>
 
