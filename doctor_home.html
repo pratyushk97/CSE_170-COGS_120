@@ -3,11 +3,15 @@
 <head>
 <title>Remoto</title>
 <style>
+html, body {
+    max-width: 100%;
+}
 body {
     background-color: White;
     text-align: center;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
 }
 .row:after {
     content: "";
@@ -25,7 +29,7 @@ body {
 }
 
 #profile {
-    margin-left: 90%;
+    margin-left: 80%;
     margin-bottom: -10%;
 }
 
@@ -39,17 +43,15 @@ body {
 #head {
 
     margin: 0%;
-    font-size: 150%;
+    font-size: 2rem;
     font-family: serif;
 }
 
-#TextBoxLeft {
+.TextBoxLeft {
     position: relative;
     font-weight: bolder;
-    color: #black;
-    border: 3px;
-    border-style: solid;
-    border-color: #black;
+    color: black;
+    border: 3px solid black;
     border-radius: 20px;
     margin-right: 30%;
     margin-left: 4%;
@@ -57,37 +59,75 @@ body {
     margin-top: 5%
 }
 
-#TextBoxRight {
+.TextBoxRight {
     position: relative;
     font-weight: bolder;
-    color: #black;
+    color: black;
     border: 3px;
     border-style: solid;
-    border-color: #black;
+    border-color: black;
     border-radius: 20px;
-    margin-left: 65%;
     margin-bottom: 5%;
-    margin-top: 5%
-    margin: 30%;
+    margin-top: 5%;
+    margin-left: auto;
     width: 30%;
 }
 
-#messagesLeft {
+.messagesLeft {
     font-family: sans-serif;
-    font-size: 150%;
+    font-size: 100%;
     padding-left: 4%;
 }
 
-#messagesRight {
+.messagesRight {
     font-family: sans-serif;
     font-size: 150%;
     padding-right: 22%;
+}
+
+.pushdown {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+
+}
+
+.question {
+    border: solid 2px blue;
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    border: 2px solid blue;
+    width: 98%;
+    color: blue;
+}
+
+.choose {
+    background: blue;
+    color: white;
+    width: 10rem;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
 }
 
 </style>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -98,7 +138,7 @@ body {
 </div>
 
 <div id="back">
-    <a href="https://samarth1998.github.io/CSE_170-COGS_120/home.html";>
+    <a href="https://samarth1998.github.io/CSE_170-COGS_120/index.html";>
         <img src="back.png" width="40px" height="40px">
     </a>
 </div>
@@ -106,31 +146,75 @@ body {
 <p id = "head"> Dr. Brad Jordan, M.D.</p>
  <hr>
 
-<div  align = "left" id = "TextBoxLeft" class = "ex1"> 
-    <p id = "messagesLeft">
-        Hi,__________! I'll be helping you diagnose your symptoms today. How are you feeling right now? 
-    </p>
-</div>
 
-<div align = "right" id = 'TextBoxRight' class = "ex2"> 
-    <img src="sad.png" width="100px" height="100px">
-    <p id = "messagesRight"> Bad </p>
-</div>
+<div style="height: 100%; width: 100%">
+    <div  align = "left" class="ex1 TextBoxLeft"> 
+        <p class = "messagesLeft" id="greet">
+            Hi,__________! I'll be helping you diagnose your symptoms today. How are you feeling right now? 
+        </p>
+    </div>
 
-<div id = "TextBoxLeft" align = "left" class = "ex3">
-    <p id = "messagesLeft">
-        Sorry to hear that :(
-    </p>
-    <p id = "messagesLeft">
-        Please describe the symptoms you're having and I'll see if I can find any solutions
-    </p>
-</div>
+    <div align = "right" class = "ex2 TextBoxRight" style="display: none" id="sad_res"> 
+        <img src="sad.png" width="100px" height="100px">
+        <p class= "messagesRight"> Bad </p>
+    </div>
 
+    <div align = "left" class = "ex3 TextBoxLeft" style="display: none" id="sad_q2">
+        <p class= "messagesLeft">
+            Sorry to hear that :(
+        </p>
+        <p class= "messagesLeft">
+            Please describe the symptoms you're having and I'll see if I can find any solutions
+        </p>
+    </div>
+
+    <div class="pushdown">
+        <div class="text-center" id="sadbtn">
+            <img src="sad.png"/>
+            Sad
+        </div>
+        <div id="happybtn">
+
+        <img src="sad.png" />
+        Happy
+        </div>  
+    </div>
+    <div class="fixed-bottom" style="display: none;">
+        <p>
+           Please describe your symptoms here 
+        </p>
+
+        <p>
+            OR
+        </p>
+
+        <div style="width: 100%">
+            <div class="choose">
+                Choose From A List
+            </div>
+        </div>
+    </div>
 </div>
 <script>
 function goBack() {
     window.history.back();
 }
+
+$('#sadbtn').click(() => {
+    $(".pushdown").hide();
+    $('#sad_res').show();
+    $("#sad_q2").show();
+    $('.fixed-bottom').show();
+})
+
+$('.choose').click(() => {
+    alert("Your Options Here")
+})
+
+$('#happybtn').click(() => {
+    alert("hi!!!");
+})
+
 </script>
 
 </body>
